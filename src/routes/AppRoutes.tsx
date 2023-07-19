@@ -1,11 +1,10 @@
 import React from "react";
+import { HomePageView, DetailViewPage, DetailViewEpisode } from "../components";
 import {
   BrowserRouter as Router,
   Route,
   Routes as ReactRoutes,
 } from "react-router-dom";
-
-import { DetailViewPage, DetailViewEpisode, HomePageView } from "../components";
 
 const AppRoutes: React.FC = () => {
   return (
