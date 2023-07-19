@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "start": "webpack serve --mode development  > NUL",
+    "build": "webpack --mode production  > NUL"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/rpenyav/inditex_2023_webpack#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.14.2",
