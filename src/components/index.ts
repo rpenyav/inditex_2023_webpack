@@ -4,3 +4,4 @@ export { default as DetailViewEpisode } from "./DetailViewEpisode";
 export { default as Cabecera } from "./Cabecera";
 export { default as SpinnerIcon } from "./SpinnerIcon";
 export { default as ListViewPage } from "./ListViewPage";
+export { default as PodcasterCardDetail } from "./PodcasterCardDetail";
