@@ -2,11 +2,13 @@ const path = require("path");
 const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = {
+const isJest = process.env.JEST_WORKER_ID !== undefined;
+
+const webpackConfig = {
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].js", // Cambia el nombre del archivo de salida
+    filename: "[name].js",
     publicPath: "/",
   },
   resolve: {
@@ -71,3 +73,23 @@ module.exports = {
     },
   },
 };
+
+const jestConfig = {
+  // Patrones de archivos de prueba
+  testMatch: ["<rootDir>/src/test/**/*.(spec|test).(js|jsx|ts|tsx)"],
+
+  // Mapeo de módulos para mocks o stubs
+  moduleNameMapper: {
+    "\\.(css|less|scss)$": "identity-obj-proxy",
+  },
+
+  // Transformaciones de archivos
+  transform: {
+    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
+  },
+
+  // Extensiones de archivos permitidas
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+};
+
+module.exports = isJest ? jestConfig : webpackConfig;
