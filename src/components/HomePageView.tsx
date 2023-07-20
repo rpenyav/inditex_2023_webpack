@@ -1,13 +1,12 @@
 import React from "react";
-// import GlobalLayout from "../../layout/GlobalLayout";
-// import ListViewPage from "../ListView/ListViewPage";
+import GlobalLayout from "../layout/GlobalLayout";
+import ListViewPage from "./ListViewPage";
 
 const HomePageView: React.FC = () => {
   return (
-    <>Home</>
-    // <GlobalLayout>
-    //   <ListViewPage />
-    // </GlobalLayout>
+    <GlobalLayout>
+      <ListViewPage />
+    </GlobalLayout>
   );
 };
 
