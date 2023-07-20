@@ -7,7 +7,7 @@
     "start": "webpack serve --mode development  > NUL",
     "build": "webpack --mode production  > NUL",
     "lint": "eslint --ext .ts --ext .tsx src",
-    "test": "webpack --config webpack.test.config.js && jest",
+    "test": "jest",
     "test:watch": "jest --watch"
   },
   "repository": {
@@ -24,14 +24,13 @@
   "devDependencies": {
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-react": "^7.22.5",
-    "@types/enzyme": "^3.10.13",
+    "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.3",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
     "babel-jest": "^29.6.1",
     "dotenv-webpack": "^8.0.1",
-    "enzyme": "^3.11.0",
     "eslint": "^7.32.0",
     "eslint-loader": "^4.0.2",
     "jest": "^29.6.1",
