@@ -8,7 +8,7 @@
       "resolveJsonModule": true,
       "baseUrl": "./src",
       "paths": {
-        "*": ["types/*"]
+        "*": ["src/*"]
       },
       "moduleResolution": "node"
     },
