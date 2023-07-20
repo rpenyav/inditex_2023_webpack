@@ -13,6 +13,8 @@
       "moduleResolution": "node"
     },
     "include": [
-      "src", "src/test"
+      "src",
+      "src/test",
+      "src/test/**/*.test.tsx"
     ]
 }
