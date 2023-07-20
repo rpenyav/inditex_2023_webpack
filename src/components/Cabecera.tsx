@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import { RootState } from "../../redux/root-reducer";
+import { RootState } from "../redux/root-reducer";
 import SpinnerIcon from "./SpinnerIcon";
 
 const Cabecera: React.FC = () => {
-  //   const isLoading = useSelector((state: RootState) => state.podcasts.isLoading);
-  //   const isLoadingDetail = useSelector(
-  //     (state: RootState) => state.albumDetails.isLoading
-  //   );
+  const isLoading = useSelector((state: RootState) => state.podcasts.isLoading);
+  const isLoadingDetail = useSelector(
+    (state: RootState) => state.albumDetails.isLoading
+  );
 
   return (
     <div
@@ -21,7 +21,7 @@ const Cabecera: React.FC = () => {
         </h4>
       </div>
       <div className="col-1 d-flex justify-content-end align-items-center">
-        {/* {isLoading && isLoadingDetail ? <SpinnerIcon /> : null} */}
+        {isLoading && isLoadingDetail ? <SpinnerIcon /> : null}
       </div>
     </div>
   );
