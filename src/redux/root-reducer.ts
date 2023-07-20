@@ -1,14 +1,10 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import podcastsReducer from "./list/musicAlbumsReducer";
-// import musicAlbumsDetailReducer from "./Detail/detailAlbumReducer";
-// import episodesReducer from "./Detail/episodesReducer";
-// import getPodcastByIdSlice from "./Detail/podcastByIdReducer";
+import getPodcastByIdSlice from "./detail/podcastByIdReducer";
 
 const rootReducer = combineReducers({
   podcasts: podcastsReducer,
-  //   albumDetails: musicAlbumsDetailReducer,
-  //   episodes: episodesReducer,
-  //   getPodcastById: getPodcastByIdSlice,
+  getPodcastById: getPodcastByIdSlice,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
