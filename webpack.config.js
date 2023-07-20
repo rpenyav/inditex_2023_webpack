@@ -1,4 +1,5 @@
 const path = require("path");
+const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -10,6 +11,13 @@ module.exports = {
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
+
+    fallback: {
+      path: require.resolve("path-browserify"),
+      os: require.resolve("os-browserify/browser"),
+      crypto: require.resolve("crypto-browserify"),
+      stream: require.resolve("stream-browserify"),
+    },
   },
   module: {
     rules: [
@@ -27,6 +35,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+    }),
+    new Dotenv({
+      path:
+        process.env.NODE_ENV === "production"
+          ? ".env.production"
+          : ".env.development",
     }),
   ],
   devServer: {
