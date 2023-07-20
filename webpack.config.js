@@ -6,7 +6,7 @@ module.exports = {
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "[name].js", // Cambia el nombre del archivo de salida
     publicPath: "/",
   },
   resolve: {
@@ -43,5 +43,18 @@ module.exports = {
     compress: true,
     port: 3000,
     historyApiFallback: true,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      minSize: 0,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendor",
+          chunks: "all",
+        },
+      },
+    },
   },
 };
