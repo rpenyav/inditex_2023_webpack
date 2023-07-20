@@ -1,11 +1,11 @@
 import { combineReducers } from "@reduxjs/toolkit";
-// import podcastsReducer from "./List/musicalbumsReducer";
+import podcastsReducer from "./list/musicAlbumsReducer";
 // import musicAlbumsDetailReducer from "./Detail/detailAlbumReducer";
 // import episodesReducer from "./Detail/episodesReducer";
 // import getPodcastByIdSlice from "./Detail/podcastByIdReducer";
 
 const rootReducer = combineReducers({
-  //   podcasts: podcastsReducer,
+  podcasts: podcastsReducer,
   //   albumDetails: musicAlbumsDetailReducer,
   //   episodes: episodesReducer,
   //   getPodcastById: getPodcastByIdSlice,
