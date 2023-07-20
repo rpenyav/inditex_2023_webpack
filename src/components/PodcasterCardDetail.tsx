@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { RootState } from "../redux/root-reducer";
 import { AppDispatch } from "../redux/store";
 
-// import Episodes from "./Episodes";
+import Episodes from "./Episodes";
 import { fetchPodcastById } from "../redux/detail";
 
 interface Props {
@@ -52,7 +52,7 @@ const PodcasterCardDetail: React.FC<Props> = ({ showList, podcastId }) => {
       <p>
         <em>{description}</em>
       </p>
-      {/* {!showList ? null : <Episodes podcastId={podcastId} />} */}
+      {!showList ? null : <Episodes podcastId={podcastId} />}
     </div>
   );
 };

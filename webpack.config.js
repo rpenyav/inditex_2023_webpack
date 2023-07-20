@@ -23,6 +23,19 @@ module.exports = {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "eslint-loader",
+            options: {
+              configFile: ".eslintrc.json",
+              extensions: [".js", ".jsx", ".ts", ".tsx"],
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [

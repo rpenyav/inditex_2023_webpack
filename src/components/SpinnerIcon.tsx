@@ -12,10 +12,7 @@ const SpinnerIcon: React.FC = () => (
       width: "50px",
       height: "50px",
     }}
-    //  width="100%"
-    //  height="100%"
     viewBox="0 0 100 100"
-    //preserveAspectRatio="xMidYMid"
   >
     <g transform="rotate(0 50 50)">
       <circle
